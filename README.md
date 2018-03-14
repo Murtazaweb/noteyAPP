@@ -1,6 +1,6 @@
 # notes
 
-> NoteApp in Vuejs and nodejs
+> NoteApp in Vuejs and nodejs add new notes and delete notes in Vue APP
 
 ## Build Setup
 
