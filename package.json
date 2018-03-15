@@ -6,13 +6,12 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "node build/dev-server.js",
-    "build": "node build/build.js",
-    "start": "node ./bin/www",
-    "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "start": "npm run dev",
+    "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build",
+    "postinstall": "npm install express"
   },
- "engines" : { "node" : ">=8.0" },
-
   "dependencies": {
     "cookie-parser": "^1.4.3",
     "morgan": "^1.9.0",
