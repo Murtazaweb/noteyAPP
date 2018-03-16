@@ -11,6 +11,10 @@
     "start": "node ./bin/www && npm run build",
     "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build"
   },
+  "engines": {
+    "node": "8.9.3",
+    "npm": "5.6.x"
+  },
   "dependencies": {
     "cookie-parser": "^1.4.3",
     "ejs": "^2.5.7",
